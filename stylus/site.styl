@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;900&display=swap');
+@import 'normalize.styl'
+//COLORES
+gris = #F3F3F3
+gris-oscuro = #B5B5B5
+rojo = #D80000
+negro = #000000
+
+//Fonts
+tajawal = 'Tajawal', sans-serif;
+mulish = 'Mulish', sans-serif;
+//Font-weight
+light = 300
+regular = 400
+medium = 500
+bold = 700
+black = 900
+
+button, a
+    cursor pointer
+a
+    text-decoration: none
+
+*
+    box-sizing: border-box
+body
+    margin 0
+    font-size: 14px
+    font-family: mulish
+.layout
+    width 100%
+    max-width: 1920px
+    padding 0px 20px
+    margin 0 auto
+.title
+    font-size: 25px
+    font-weight: light
+    margin 0
+    letter-spacing: 0.4em;
+    text-align: center
+.Producto
+    width 100%
+    display: block
+    &:hover
+        .img
+            .float
+                display: none
+            .heart
+            .quiero
+                display block
+    .img
+        position relative
+        img
+            width 100%
+            height: 100%
+            object-fit: cover
+            display: block
+        .float
+            position: absolute
+            top 0
+            right 0
+            background: #000
+            color: white
+            font-size: 14px
+            padding 5px 15px
+        .heart
+            position: absolute
+            top 10px
+            right 10px
+            color black
+            display: none
+            font-size: 20px
+            z-index 9
+        .quiero
+            background: gris-oscuro
+            color white
+            position: absolute
+            bottom: 0
+            left 0
+            right 0
+            padding 3px
+            font-weight: 600
+            display none
+            text-align: center
+
+    .bot
+        text-align: left
+        padding 20px 0
+        h5
+            font-size: 14px
+            font-weight: bold
+            font-family: tajawal
+            margin 0
+        .price
+            font-size: 14px
+            font-family: mulish
+            margin-right: 10px
+            &.desc
+                color rojo
+            &.lastP
+                text-decoration: line-through
+        .colors
+            display: flex
+            margin-top 20px
+            .color
+                display: block
+                width 12px
+                height: 12px
+                border-radius: 50%
+                margin 0 10px 0 0
+.registrarme
+.login
+.bag
+.buscador
+    width 100%
+    position fixed
+    background: rgba(0, 0, 0, 0.389)
+    z-index 30
+    top: 117px
+    height 100%
+    right -100%
+    transition: right 0.5s;
+    &.active
+        right 0
+    &-contenido
+        position relative
+        max-width: 470px
+        margin-left: auto
+        background: white
+        padding: 90px 50px 0 50px
+        height 100%
+        &-registro
+            height 100%
+            .d-flex
+                display flex
+                justify-content: space-between
+                align-items: center
+                padding 0 30px 0 50px
+                .circulo
+                    background: negro
+                    color white
+                    border-radius: 50%
+                    width 25px
+                    height 25px
+                    display flex
+                    justify-content: center
+                    align-items: center
+            h3
+                text-align: left
+            h2
+                text-align: center
+            .cerrar
+                position: absolute
+                top: 20px
+                left: 20px
+                cursor pointer
+            form
+                position relative
+                padding: 38px 0 40px 0
+            .botones
+                padding: 0px 25px
+            .olvide
+                text-align: center
+                transform: translateY(-10px)
+                a
+                    text-decoration-line: underline;
+                    font-style: italic;
+                    font-weight: 300;
+                    font-size: 11px;
+            .input-buscador
+                position relative
+                padding: 25px 0 20px 0
+                .icono
+                    position absolute
+                    right 0
+                    font-size: 25px
+            .resultados
+                display: flex
+                justify-content: space-between
+                align-items: center
+                p
+                    font-weight: 700
+                a
+                    color gris-oscuro
+                    font-size: 14px
+                    font-weight: 400
+                    text-decoration-line: underline
+            .buscador
+                &-producto
+                    overflow-y: auto
+                    height: calc(100% - 280px)
+                    &::-webkit-scrollbar,
+                    &::-webkit-scrollbar-thumb
+                        width: 4px;
+                        border-radius: 13px;
+                        border: 10px solid transparent;
+                    &-result
+                        display: flex
+                        align-items: center
+                        &:nth-child(even)
+                            background: gris
+                        &:nth-child(odd)
+                            background: transparent
+                        &-text
+                            padding-left: 35px
+                            p
+                                margin: 4px 0
+            .scroll
+                height calc(100% - 178px)
+                overflow-y: auto
+                &::-webkit-scrollbar,
+                &::-webkit-scrollbar-thumb
+                    width: 4px;
+                    border-radius: 13px;
+                    border: 10px solid transparent;
+            .boton
+                padding: 0 !important
+            .recomendaciones
+                padding-bottom: 30px
+                background: gris
+                p
+                    padding-top: 15px
+                    text-align: center
+                &-contenido
+                    padding 8px 35px 0
+                    display flex
+                    align-items: center
+                    justify-content: space-between
+                    &-img
+                        width calc(50% - 10px)
+                        img
+                            width 100%
+                            display block
+            .bag
+                &-producto
+                    padding-top: 45px
+                    &-item
+                        &:nth-child(even)
+                            background: gris
+                        &:nth-child(odd)
+                            background: transparent
+                        &-contenido
+                            padding: 0 30px 0 20px
+                            position relative
+                            display flex
+                            align-items: center
+                            &-text
+                                padding-left: 60px
+                                .bag-titulo
+                                    padding-bottom: 15px
+                                    h4
+                                        font-size: 14px
+                                        font-weight: 400
+                                        margin 0
+                                .bag-descripcion
+                                    &-item
+                                        display: flex
+                                        align-items: center
+                                        padding-bottom: 5px
+                                        &:last-child
+                                            padding-bottom: 0
+                                        p
+                                            font-weight: 400;
+                                            font-size: 12px;
+                                            font-family: tajawal
+                                            margin: 0
+                                    .precio
+                                        p
+                                            font-weight: 400;
+                                            font-size: 14px;
+                                            margin: 0
+                            .icono-eliminar
+                                position absolute
+                                right 30px
+                                top: 10px
+                                border-radius: 50%
+                                border 1px solid negro
+                                height 17px
+                                width 17px
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                .icon-menos
+                                    font-size: 8px
+
+.bag
+    &-contenido
+        padding: 90px 0 0 0
+
+.layout2
+    width 100%
+    max-width: 1500px
+    padding 0px 20px
+    margin 0 auto
+.input
+    width 100%
+    padding-bottom: 25px
+    input
+    textarea
+    select
+        width 100%
+        border none
+        background: transparent
+        border-bottom: 1px solid negro
+        padding: 7px 5px
+        &:focus
+            outline: none
+    textarea
+        height: 90px
+        resize: none
+
+    label
+        font-size: 14px
+        font-weight: 400
+.boton
+.boton-gris
+    padding-top: 30px
+    a
+    button
+        background: negro
+        color white
+        width 100%
+        padding: 8px 0
+        font-size: 14px
+        font-weight: 700
+        border none
+        text-align: center
+    a
+        display inline-block
+#btnMenu
+    display none
+.boton-gris
+    padding 0
+    button
+        background: gris
+        color negro
+
+.header
+    position: fixed
+    top 0
+    left 0
+    right 0
+    z-index 10
+    background: white
+    box-shadow: 0px 1px 5px 0px #3f3f3f91
+    &.fixed
+        background: white
+        position: fixed
+    .topbar
+        background: #000
+        color white
+        text-align: center
+        padding 8px 0
+        font-size: 12px
+        font-weight: 300
+        letter-spacing: 0.4em;
+        font-family: mulish
+        strong
+            font-weight: 700
+
+    &-container
+        display flex
+        align-items: center
+        max-width: 1740px
+        position relative
+        .actions
+            display: flex
+            align-items: center
+            span, a
+                cursor pointer
+                display: block
+                margin 0 10px
+                font-size: 20px
+                transition: all 0.5s;
+                &.selected
+                    background: negro
+                    color white
+                    border-radius: 50%
+                    padding: 7px
+        figure
+            display none
+
+.menu
+    width 100%
+    max-width: 1200px
+    margin 0 auto
+    padding-left: 130px
+    .icon
+        display none
+    ul
+        display: flex
+        align-items: center
+        list-style none
+        justify-content: center
+        padding 0
+        li
+            width calc(100% / 7)
+            text-align: center
+        .figure
+            width calc(100% / 7 + 50px)
+            img
+                display: block
+                margin 0 auto
+                width 100%
+                max-width: 90px
+.footer
+    background: #000
+    color white
+    padding 50px 0
+    &-container
+        display flex
+        flex-wrap: wrap
+        .col
+            width 20%
+            text-align: center
+            padding 0 20px
+            font-size: 14px
+            a
+                display: block
+                margin 3px 0
+                font-weight: 300
+            p
+                max-width: 220px
+                margin 3px auto
+                font-weight: 300
+            h4
+                font-size: 14px
+                font-weight: 700
+                margin 10px 0
+            .tarjetas
+                img
+                    margin 5px
+
+            &.redes
+                width 100%
+                margin 30px 0
+                display: flex
+                justify-content: center
+                a
+                    margin 0 5px
+                    font-size: 20px
+            &.made
+                width 100%
+
+.formulario
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width 100%
+    &-50
+        width calc(50% - 25px)
+        position relative
+    &-25
+        position relative
+        width calc(50% - 20px)
+
+
+.compras
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    &-item
+    &-historico
+        width calc(25% - 10px)
+        display flex
+        align-items: center
+        padding-bottom: 55px
+        &-datos
+            padding-left: 20px
+            .dato-historico
+                padding-bottom: 5px
+                p
+                    font-size: 9px
+            .dato-item
+            .dato-historico
+                display flex
+                align-items: center
+                flex-wrap: wrap
+                &-item
+                    width 100%
+                    display: flex
+                    align-items: center
+                .negritas
+                    font-weight: 700
+                p
+                    margin: 1px 0
+                    padding-right: 5px
+                .titulo
+                    font-size: 11px
+                .precio
+                    font-size: 14px
+            .dato-folio
+                padding-bottom: 15px
+    &-historico
+        width calc(50% - 10px)
+    &-item
+        cursor pointer
+@media screen and (max-width: 1120px)
+    .header
+        &-container
+            height: 85px
+            justify-content: center
+            .actions
+                position: absolute
+                right 20px
+                a
+                    margin 0 5px
+            figure
+                text-align: center
+                display block
+                margin 0
+                a
+                    display: block
+                    img
+                        width 100%
+                        max-width: 80px
+                        display: block
+    #btnMenu
+        position: absolute
+        left 20px
+        font-size: 20px
+        display block
+    .menu
+        position: fixed
+        width 30%
+        height: 100%
+        left -100%
+        top 0
+        background: white
+        padding 50px 20px 20px
+        &.active
+            left 0
+        .icon
+            display block
+            position: absolute
+            right 20px
+            top 10px
+            font-size: 18px
+            cursor: pointer
+        ul
+            flex-direction: column
+            justify-content: center
+            li
+                width 100%
+                margin 10px 0
+                &.figure
+                    display none
+@media screen and (max-width: 1020px)
+    .footer
+        &-container
+            justify-content: center
+            .col
+                width 33.33%
+                margin 20px 0
+@media screen and (max-width: 680px)
+    .footer
+        &-container
+            .col
+                width 50%
+@media screen and (max-width: 480px)
+    .registrarme
+    .login
+    .bag
+    .buscador
+        &-contenido
+            max-width 100%
+@media screen and (max-width: 460px)
+    .header
+        &-container
+            height: 70px
+            .actions
+                span,a
+                    font-size: 16px
+                    margin 0 4px
+                    &.selected
+                        padding 4px
+            figure
+                a
+                    img
+                        max-width: 75px
+    .footer
+        &-container
+            .col
+                width 100%

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUEBLES TRONCOSO - GRACIAS POR TU PEDIDO</title>
+    <link rel="stylesheet" href="/stylus/envio.css">
+</head>
+<body>
+    <div class="gracias">
+        <div class="gracias-contenido">
+            <div class="gracias-contenido-titulo">
+                <h1>¡GRACIAS POR TU PEDIDO!</h1>
+                <p class="text-orden">No. de orden: 00001234</p>
+                <p>
+                    Hemos enviado un mensaje de confirmacion de tu compra al correo:
+                </p>
+                <span>cristianleyvacr7@gmail.com</span>
+               
+                <p class="text-direccion">Puedes pasar a recoger tu pedido despues de los proximos 5 dias</p>
+            </div>
+            <div class="gracias-contenido-resumen">
+                <div class="gracias-contenido-resumen-imagen">
+                    <div class="productos">
+                        <div class="producto">
+                            <div class="producto-imagen">
+                                <img src="/IMAGENES/recuadros1.jpg" alt="MUEBLES TRONCOSO">
+                            </div>
+                            <div class="producto-descripcion">
+                                <div class="producto-descripcion-seccion">
+                                    <h4>Mueble negro</h4>
+                                    <p class="precio">$1,200.00</p>
+                                    <div class="cantidad">
+                                        <p>Cantidad:</p>
+                                        <p>1</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="producto">
+                            <div class="producto-imagen">
+                                <img src="/IMAGENES/reacuadro4.jpg" alt="MUEBLES TRONCOSO">
+                            </div>
+                            <div class="producto-descripcion">
+                                <div class="producto-descripcion-seccion">
+                                    <h4>Mueble negro</h4>
+                                    <p class="precio">$1,200.00</p>
+                                    <div class="cantidad">
+                                        <p>Cantidad:</p>
+                                        <p>1</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="producto">
+                            <div class="producto-imagen">
+                                <img src="/IMAGENES/recuadro5.jpg" alt="MUEBLES TRONCOSO">
+                            </div>
+                            <div class="producto-descripcion">
+                                <div class="producto-descripcion-seccion">
+                                    <h4>Mueble negro</h4>
+                                    <p class="precio">$1,200.00</p>
+                                    <div class="cantidad">
+                                        <p>Cantidad:</p>
+                                        <p>1</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="producto">
+                            <div class="producto-imagen">
+                                <img src="/IMAGENES/reacuadro4.jpg" alt="MUEBLES TRONCOSO">
+                            </div>
+                            <div class="producto-descripcion">
+                                <div class="producto-descripcion-seccion">
+                                    <h4>Mueble negro</h4>
+                                    <p class="precio">$1,200.00</p>
+                                    <div class="cantidad">
+                                        <p>Cantidad:</p>
+                                        <p>1</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gracias-contenido-resumen-content">
+                    <div class="gracias-contenido-resumen-content-text">
+                        <div class="gracias-titulo">
+                            <h2 class="title">RESUMEN</h2>
+                            <p class="title">6</p>
+                        </div>
+                        <div class="gracias-resumen">
+                            <div class="gracias-resumen-contenido">
+                                <div class="gracias-resumen-contenido-item">
+                                    <p>Subtotal:</p>
+                                    <p>$10,500.00</p>
+                                </div>
+                                <div class="gracias-resumen-contenido-item">
+                                    <p>Descuento:</p>
+                                    <p>$0.00</p>
+                                </div>
+                                <div class="gracias-resumen-contenido-item">
+                                    <p>Envío:</p>
+                                    <p>$0.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gracias-total">
+                            <p>TOTAL:</p>
+                            <p>$10,500.00</p>
+                        </div>
+                        <div class="boton">
+                            <button>SEGUIR COMPRANDO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="/plugins/slick/slick.min.js"></script>
+    <script>
+        $('.productos').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			infinite: true,
+			arrows: true,
+			docts: true,
+			nextArrow: '<span class="icon icon-siguiente icon-sig"></span>',
+    		prevArrow: '<span class="icon icon-anterior icon-atras"></span>',
+            responsive: [
+                {
+                breakpoint: 765,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+                },
+                {
+                breakpoint: 530,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+                },
+            ],
+		});
+    </script>
+</body>
+</html>

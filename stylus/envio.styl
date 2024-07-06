@@ -1,0 +1,384 @@
+@import 'site.styl';
+
+.datos
+    &-titulo
+        display: flex
+        &-linea
+            background: gris
+            width 50%
+            padding: 10px 0 5px 0
+            .linea
+                display: flex
+                justify-content: space-between
+                align-items: center
+                max-width: 800px
+                margin: 0 auto
+                padding: 0 30px
+                p  
+                    letter-spacing: 6px
+                    color gris-oscuro
+                    &.selected
+                        color negro
+        &-text
+            width 50%
+            background: gris-oscuro
+            color white
+            text-align: center
+            padding: 10px 0 5px 0
+            p
+                font-size: 14px
+                font-weight: regular
+                letter-spacing: 4px   
+    &-contenido
+        display: flex
+    
+        &-requerido
+        &-bag
+            width 50%
+        &-requerido
+            position relative
+            padding 0 60px 0 120px
+            border-right: 1px solid gris-oscuro
+            .logo
+                padding: 60px 0 30px 0
+            &-form
+                h3
+                    font-size: 20px
+                    font-weight: regular
+                    padding-bottom: 20px
+                .metodos
+                    display: flex
+                    align-items: center
+                    flex-wrap: wrap
+                    &-pago
+                        border 1px solid gris-oscuro
+                        margin:0 20px 10px 0
+                        cursor: pointer
+                        &.selected
+                            border: 1px solid negro
+                .tarjeta
+                    padding-top: 60px
+
+            &-botones
+                display: flex
+                justify-content: space-between
+                align-items: center
+                position absolute
+                bottom 10px
+                width calc(100% - 180px)
+                .boton-volver
+                    display: flex
+                    align-items: center
+                    p 
+                        padding-left: 10px
+                .boton
+                    padding-top: 0 !important
+                    width calc(50% - 25px)
+        &-bag
+            &-descripcion
+                max-width: 450px
+                margin: 0 auto
+                .descripcion
+                    &-titulo
+                        text-align: center
+                        border-bottom: 1px solid negro
+                        padding: 60px 0 15px 0
+                        h2
+                            padding-bottom: 8px
+                    &-producto
+                        padding: 20px 20px 45px 20px
+                        border-bottom: 1px solid negro
+                        .producto-item
+                            display: flex
+                            justify-content: space-between
+                            padding-bottom: 20px
+                            &-img
+                                display flex
+                                align-items: flex-start
+                                img
+                                    width 100%
+                                    max-width: 75px
+
+                                .titulo
+                                    font-size: 14px
+                                    font-weight: 400
+                                .compras-item-datos
+                                    padding-top 15px
+                            &-precio
+                                p
+                                    font-weight: 700
+                    &-descuento
+                        border-bottom: 1px solid negro
+                        padding: 30px 0 30px 0
+                        &-boton
+                            display: flex
+                            align-items: center
+                            justify-content: space-evenly
+                            padding: 0 40px
+                            input
+                                border 1px solid negro
+                                padding: 8px 5px
+                            button
+                                background: negro
+                                color white
+                                font-size: 14px
+                                font-weight: 700
+                                padding 8px 25px
+                                border none
+                        &-total
+                            padding-top: 30px
+                            .total-item
+                                display: flex
+                                align-items: center
+                                justify-content: space-between
+                                padding: 0 65px
+                                p
+                                    margin: 1px 0
+                    &-total
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        padding: 10px 65px 20px
+                        p
+                            font-size: 16px
+                            font-weight: 500
+                            font-family: tajawal
+    &-bottom
+        display: flex
+        align-items: center
+        &-50
+            width 50%
+            display: flex
+            align-items: center
+            justify-content: space-evenly
+            padding: 40px 0
+            a
+                color negro
+        .bg-gris
+            background: gris
+
+.gracias
+    padding: 50px 0 50px 0
+    &-contenido
+        &-titulo
+            text-align: center
+            h1
+                font-family: tajawal;
+                font-weight: 300;
+                font-size: 32px;
+                margin: 0
+            .text-orden
+                font-family: tajawal;
+                font-weight: 700;
+                font-size: 20px;
+                margin: 0
+                padding: 15px 0 45px 0
+            span
+                font-weight: 700;
+                font-size: 14px;
+                font-family: tajawal;
+            .text-direccion
+                padding-top 50px
+            p
+                margin: 0
+                padding-bottom: 10px
+        &-resumen
+            padding-top: 80px
+            display: flex
+            align-items: center
+            &-imagen
+                width 70%
+                .productos
+                    display flex
+                    justify-content: space-between
+                    padding:0 30px 0 70px
+                    .producto
+                        margin 0 12px
+                        width calc(33.33% - 15px)
+                        &-imagen
+                            img
+                                width 100%
+                                display block
+                        &-descripcion
+                            padding-top: 20px
+                            display flex
+                            justify-content: space-between
+                            align-items: baseline
+                            &-seccion
+                                width 50%
+                                .precio
+                                    font-family: tajawal;
+                                    font-weight: 500;
+                                    font-size: 14px;
+                                p,h4
+                                    margin 0
+                                h4
+                                    font-weight: 400
+                                    padding-bottom: 10px
+                                .cantidad
+                                    display: flex
+                                    align-items: center
+                                    padding-top: 8px
+                                    p
+                                        font-family: tajawal;
+                                        font-weight: 400;
+                                        font-size: 12px;
+                                .detalle
+                                    display: flex
+                                    align-items: center
+                                    justify-content: flex-end
+                                    p, span
+                                        padding:0 5px
+                                        color gris-oscuro
+                                .compras-item-datos
+                                    .dato
+                                        &-historico
+                                            padding-top 6px
+                                            &-item
+                                                justify-content: flex-end
+            &-content
+                width 30%
+                &-text
+                    padding: 0 30px 0 0
+                    .gracias
+                        &-titulo
+                            text-align: center
+                            border-bottom: 1px solid negro
+                            padding-bottom: 20px
+                            max-width: 450px
+                            margin: 0 auto
+                            h2
+                                padding-bottom: 25px
+                        &-resumen
+                            border-bottom: 1px solid negro
+                            max-width: 450px
+                            margin: 0 auto
+                            padding: 40px 0
+                            &-contenido
+                                max-width: 230px
+                                margin: 0 auto
+                                &-item
+                                    display flex
+                                    justify-content: space-between
+                                    align-items: center
+                                    p
+                                        margin 0
+                        &-total
+                            display flex
+                            justify-content: space-between
+                            align-items: center
+                            max-width: 230px
+                            margin: 0 auto
+                            padding: 25px 0
+                            p   
+                                font-size: 16px
+                                font-weight: 500
+                                font-family: tajawal
+                    .boton
+                        padding: 0
+                        max-width: 450px
+                        margin: 0 auto
+form
+    position relative
+
+
+.icon-sig
+.icon-atras
+    position absolute
+    top: 40%
+    bottom 50%
+    font-size: 20px
+    cursor pointer
+.icon-atras
+    left 52px
+.icon-sig
+    right 10px
+@media screen and (max-width 1330px)
+    .datos
+        &-contenido
+            &-requerido
+                padding: 0 30px 
+                &-botones
+                    width calc(100% - 60px)
+            
+@media screen and (max-width 1200px)
+    .datos
+        &-titulo
+            &-linea 
+                .linea
+                    p
+                        letter-spacing: 2px
+                        font-size: 12px
+    .gracias
+        &-contenido
+            &-resumen
+                &-content
+                    width 25%
+                    &-text 
+                        .gracias
+                            &-total
+                                padding: 5px 0
+                            &-resumen
+                                padding: 20px 0
+                &-imagen
+                    width 75%
+@media screen and (max-width 1070px)
+    .gracias
+        padding: 220px 0 100px 0
+        &-contenido
+            &-resumen
+                flex-wrap: wrap
+                &-imagen
+                &-content
+                    width 100%
+                &-imagen
+                    .productos
+                        padding: 0 30px 0 30px
+                &-content
+                    padding-top: 80px  
+                    &-text
+                        padding: 0 20px       
+    .icon-atras
+        left: 10px
+@media screen and (max-width 900px)
+    .datos
+        &-titulo
+            &-linea
+                width 100%
+            &-text
+                display: none
+        &-contenido
+            flex-wrap: wrap-reverse
+            &-requerido
+            &-bag
+                width 100%
+                &-botones
+                    position relative
+                    bottom unset
+                    width 100%
+                    padding 60px 0 80px
+        &-bottom
+            &-50
+                display: none
+            .bg-gris
+                display flex
+                width 100%
+                text-align: center
+                                
+@media screen and (max-width 500px)
+    .formulario
+        flex-wrap: wrap
+        .formulario-25
+        .formulario-50
+            width 100%
+    .datos
+        &-titulo
+            &-linea 
+                .linea 
+                    padding: 0 10px
+                    p
+                        letter-spacing: 0
+
+
+
+

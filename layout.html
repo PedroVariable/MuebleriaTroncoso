@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../plugins/validationEngine/validationEngine.jquery.css">
+	<link rel="stylesheet" type="text/css" href="..//plugins/sweetalert/sweetalert.css">
+	<link rel="stylesheet" type="text/css" href="..//plugins/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="..//plugins/slick/slick-theme.css">
+	<script src="/plugins/sweetalert/sweetalert.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container layout">
+            <span id="btnMenu" class="icon icon-menu"></span>
+            <nav class="menu">
+                <span class="icon icon-cerrar" id="cerrarMenu"></span>
+                <ul>
+                    <li>
+                        <a href="">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="">CATALOGO</a>
+                    </li>
+                    <li>
+                        <a href="">CONTACTO</a>
+                    </li>
+                    <li class="figure">
+                        <a href="../home">
+                            <img src="../images/logo_MUEBLES TRONCOSO.png" alt="MUEBLES TRONCOSO">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <figure>
+                <a href="../home">
+                    <img src="../images/logo_MUEBLES TRONCOSO.png" alt="MUEBLES TRONCOSO">
+                </a>
+            </figure>
+            <div class="actions">
+                <span id="buscador" class="icon icon-buscar"></span>
+                <span id="carrito" class="icon icon-carrito"></span>
+                <span id="registro" class="icon icon-usuario"></span>
+            </div>
+        </div>
+    </header>
+    <div class="registrarme">
+        <div class="registrarme-contenido">
+            <div class="registrarme-contenido-registro">
+                <span class="icon icon-cerrar cerrar"></span>
+                <h2 class="title">REGISTRARME</h2>
+                <form id="formRegistro">
+                    <div class="input">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" data-validation-engine="validate[required]">
+                    </div>
+                    <div class="input">
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correo" data-validation-engine="validate[required,custom[email]]">
+                    </div>
+                    <div class="input">
+                        <label for="pass">Contraseña</label>
+                        <input type="password" name="pass" id="password2" data-validation-engine="validate[required]">
+                    </div>
+                    <div class="input">
+                        <label for="passC">Confirmar contraseña</label>
+                        <input type="password" name="passC" data-validation-engine="validate[required,equals[password2]]">
+                    </div>
+                    <div class="botones">
+                        <div class="boton">
+                            <button>REGISTRARME</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="botones">
+                    <div class="boton-gris">
+                        <button id="btnCuenta">YA TENGO UNA CUENTA</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login">
+        <div class="login-contenido">
+            <div class="login-contenido-registro">
+                <span class="icon icon-cerrar cerrar"></span>
+                <h2 class="title">INICIAR SESIÓN</h2>
+                <form id="formLogin">
+                    <div class="input">
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correo" data-validation-engine="validate[required,custom[email]]">
+                    </div>
+                    <div class="input">
+                        <label for="pass">Contraseña</label>
+                        <input type="password" name="pass" data-validation-engine="validate[required]">
+                    </div>
+                    <div class="olvide">
+                        <a href="../recuperar_contrasena">Olvide mi contraseña</a>
+                    </div>
+                    <div class="botones">
+                        <div class="boton">
+                            <button>ENTRAR</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="botones">
+                    <div class="boton-gris">
+                        <button id="btnRegistrarme">REGISTRARME</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bag">
+        <div class="bag-contenido">
+            <div class="bag-contenido-registro">
+                <span class="icon icon-cerrar cerrar"></span>
+                <div class="d-flex">
+                    <h2 class="title">BAG</h2>
+                    <span class="circulo">4</span>
+                </div>
+                <div class="scroll">
+                    <div class="bag-producto">
+                        <div class="bag-producto-item">
+                            <div class="bag-producto-item-contenido">
+                                <div class="bag-producto-item-contenido-img">
+                                    <img src="../images/bag/bag1.jpg" alt="MUEBLES TRONCOSO">
+                                </div>
+                                <div class="bag-producto-item-contenido-text">
+                                    <div class="bag-titulo">
+                                        <h4>Vestido dorado</h4>
+                                    </div>
+                                    <div class="bag-descripcion">
+                                        <div class="bag-descripcion-item">
+                                            <p>Talla:</p>
+                                            <p>M</p>
+                                        </div>
+                                        <div class="bag-descripcion-item">
+                                            <p>Cantidad:</p>
+                                            <p>1</p>
+                                        </div>
+                                        <div class="bag-descripcion-item precio">
+                                            <p>$1,200.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icono-eliminar">
+                                    <span class="icon icon-menos"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bag-producto-item">
+                            <div class="bag-producto-item-contenido">
+                                <div class="bag-producto-item-contenido-img">
+                                    <img src="../images/bag/bag1.jpg" alt="MUEBLES TRONCOSO">
+                                </div>
+                                <div class="bag-producto-item-contenido-text">
+                                    <div class="bag-titulo">
+                                        <h4>Vestido dorado</h4>
+                                    </div>
+                                    <div class="bag-descripcion">
+                                        <div class="bag-descripcion-item">
+                                            <p>Talla:</p>
+                                            <p>M</p>
+                                        </div>
+                                        <div class="bag-descripcion-item">
+                                            <p>Cantidad:</p>
+                                            <p>1</p>
+                                        </div>
+                                        <div class="bag-descripcion-item precio">
+                                            <p>$1,200.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icono-eliminar">
+                                    <span class="icon icon-menos"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bag-producto-item">
+                            <div class="bag-producto-item-contenido">
+                                <div class="bag-producto-item-contenido-img">
+                                    <img src="../images/bag/bag1.jpg" alt="MUEBLES TRONCOSO">
+                                </div>
+                                <div class="bag-producto-item-contenido-text">
+                                    <div class="bag-titulo">
+                                        <h4>Vestido dorado</h4>
+                                    </div>
+                                    <div class="bag-descripcion">
+                                        <div class="bag-descripcion-item">
+                                            <p>Talla:</p>
+                                            <p>M</p>
+                                        </div>
+                                        <div class="bag-descripcion-item">
+                                            <p>Cantidad:</p>
+                                            <p>1</p>
+                                        </div>
+                                        <div class="bag-descripcion-item precio">
+                                            <p>$1,200.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icono-eliminar">
+                                    <span class="icon icon-menos"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bag-producto-item">
+                            <div class="bag-producto-item-contenido">
+                                <div class="bag-producto-item-contenido-img">
+                                    <img src="../images/bag/bag1.jpg" alt="MUEBLES TRONCOSO">
+                                </div>
+                                <div class="bag-producto-item-contenido-text">
+                                    <div class="bag-titulo">
+                                        <h4>Vestido dorado</h4>
+                                    </div>
+                                    <div class="bag-descripcion">
+                                        <div class="bag-descripcion-item">
+                                            <p>Talla:</p>
+                                            <p>M</p>
+                                        </div>
+                                        <div class="bag-descripcion-item">
+                                            <p>Cantidad:</p>
+                                            <p>1</p>
+                                        </div>
+                                        <div class="bag-descripcion-item precio">
+                                            <p>$1,200.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icono-eliminar">
+                                    <span class="icon icon-menos"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recomendaciones">
+                        <p>RECOMENDADOS</p>
+                        <div class="recomendaciones-contenido">
+                            <div class="recomendaciones-contenido-img">
+                                <img src="../images/bag/recomendado1.jpg" alt="MUEBLES TRONCOSO">
+                            </div>
+                            <div class="recomendaciones-contenido-img">
+                                <img src="../images/bag/recomendado2.jpg" alt="MUEBLES TRONCOSO">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boton">
+                    <a href="../datos_de_envio">TERMINAR COMPRA</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buscador">
+        <div class="buscador-contenido">
+            <div class="buscador-contenido-registro">
+                <span class="icon icon-cerrar cerrar"></span>
+                <h3 class="title">BUSCAR</h3>
+                <div class="input input-buscador">
+                    <input type="text" placeholder="¿Qué estas buscando?">
+                    <span class="icon icon-flecha icono"></span>
+                </div>
+                <div class="resultados">
+                    <p>15 Resultados</p>
+                    <a href="../catalogo">Ver todos</a>
+                </div>
+                <div class="buscador-producto">
+                    <div class="buscador-producto-result">
+                        <div class="buscador-producto-result-img">
+                            <img src="../images/bag/bag1.jpg" alt="MUEBLES TRONCOSO">
+                        </div>
+                        <div class="buscador-producto-result-text">
+                            <p>Vestido dorado</p>
+                            <p>$1,200.00</p>
+                        </div>
+                    </div>
+                    <div class="buscador-producto-result">
+                        <div class="buscador-producto-result-img">
+                            <img src="../images/bag/bag2.jpg" alt="MUEBLES TRONCOSO">
+                        </div>
+                        <div class="buscador-producto-result-text">
+                            <p>Vestido dorado</p>
+                            <p>$1,200.00</p>
+                        </div>
+                    </div>
+                    <div class="buscador-producto-result">
+                        <div class="buscador-producto-result-img">
+                            <img src="../images/bag/bag3.jpg" alt="MUEBLES TRONCOSO">
+                        </div>
+                        <div class="buscador-producto-result-text">
+                            <p>Vestido dorado</p>
+                            <p>$1,200.00</p>
+                        </div>
+                    </div>
+                    <div class="buscador-producto-result">
+                        <div class="buscador-producto-result-img">
+                            <img src="../images/bag/bag4.jpg" alt="MUEBLES TRONCOSO">
+                        </div>
+                        <div class="buscador-producto-result-text">
+                            <p>Vestido dorado</p>
+                            <p>$1,200.00</p>
+                        </div>
+                    </div>
+                    <div class="buscador-producto-result">
+                        <div class="buscador-producto-result-img">
+                            <img src="../images/bag/bag1.jpg" alt="MUEBLES TRONCOSO">
+                        </div>
+                        <div class="buscador-producto-result-text">
+                            <p>Vestido dorado</p>
+                            <p>$1,200.00</p>
+                        </div>
+                    </div>
+                    <div class="buscador-producto-result">
+                        <div class="buscador-producto-result-img">
+                            <img src="../images/bag/bag2.jpg" alt="MUEBLES TRONCOSO">
+                        </div>
+                        <div class="buscador-producto-result-text">
+                            <p>Vestido dorado</p>
+                            <p>$1,200.00</p>
+                        </div>
+                    </div>
+                    <div class="buscador-producto-result">
+                        <div class="buscador-producto-result-img">
+                            <img src="../images/bag/bag3.jpg" alt="MUEBLES TRONCOSO">
+                        </div>
+                        <div class="buscador-producto-result-text">
+                            <p>Vestido dorado</p>
+                            <p>$1,200.00</p>
+                        </div>
+                    </div>
+                    <div class="buscador-producto-result">
+                        <div class="buscador-producto-result-img">
+                            <img src="../images/bag/bag4.jpg" alt="MUEBLES TRONCOSO">
+                        </div>
+                        <div class="buscador-producto-result-text">
+                            <p>Vestido dorado</p>
+                            <p>$1,200.00</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container layout">
+            <div class="col">
+                <a href="../home">
+                    <img src="../images/logo_blanco.png" alt="MUEBLES TRONCOSO">
+                </a>
+            </div>
+            <div class="col">
+                <h4>DIRECCIÓN</h4>
+                <p>Av. León 202, Jardines del Moral,
+                    37160 León, Gto.</p>
+            </div>
+            <div class="col">
+                <h4>CONTACTO</h4>
+                <p>Tel. 479 145 1392</p>
+                <p>contacto@MUEBLES TRONCOSOcollection.com</p>
+            </div>
+            <div class="col">
+                <h4>LEGALES</h4>
+                <a href="../aviso_de_privacidad">Aviso de privacidad</a>
+                <a href="../aviso_de_privacidad">Cambios y devoluciones</a>
+                <a href="../aviso_de_privacidad">Preguntas frecuentes</a>
+            </div>
+            <div class="col">
+                <h4>REALIZA TUS PAGOS CON:</h4>
+                <div class="tarjetas">
+                    <img src="../images/visa.png" alt="MUEBLES TRONCOSO">
+                    <img src="../images/mastercard.png" alt="MUEBLES TRONCOSO">
+                    <img src="../images/oxxo.png" alt="MUEBLES TRONCOSO">
+                    <img src="../images/paypal.png" alt="MUEBLES TRONCOSO">
+                    <img src="../images/mercadopago.png" alt="MUEBLES TRONCOSO">
+                </div>
+            </div>
+            <div class="col redes">
+                <a href="../#" class="icon icon-fb"></a>
+                <a href="../#" class="icon icon-insta"></a>
+            </div>
+            <div class="col made">
+                <p>HECHO POR:</p>
+                <a href="../https://www.corvuz.com/" target="_blank">
+                    <img src="../images/logo_corvuz.png" alt="MUEBLES TRONCOSO">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../plugins/jquery.min.js"></script>
+    <script src="../plugins/slick/slick.min.js"></script>
+    <script src="../plugins/validationEngine/jquery.validationEngine.js"></script>
+	<script src="../plugins/validationEngine/jquery.validationEngine-es.js"></script>
+    <script>
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+
+            //>=, not <=
+            if (scroll >= 300) {
+                //clearHeader, not clearheader - caps H
+                $(".header").addClass("fixed");
+            }else{
+                $(".header").removeClass("fixed");
+            }
+        });
+        $('.cerrar').on('click', function(){
+            $('.registrarme').removeClass('active');
+            $('.login').removeClass('active');
+            $('.buscador').removeClass('active');
+            $('#buscador').removeClass('selected');
+            $('#registro').removeClass('selected');
+            $('.bag').removeClass('active');
+            $('#carrito').removeClass('selected');
+        })
+        $('#registro').on('click', function(){
+            $('.registrarme').addClass('active');
+            $('#registro').addClass('selected');
+            $('#buscador').removeClass('selected');
+            $('.buscador').removeClass('active');
+            $('.bag').removeClass('active');
+            $('#carrito').removeClass('selected');
+        })
+        $('#carrito').on('click', function(){
+            $('.bag').addClass('active');
+            $('#carrito').addClass('selected');
+            $('#buscador').removeClass('selected');
+            $('.buscador').removeClass('active');
+            $('.registrarme').removeClass('active');
+            $('#registro').removeClass('selected');
+            $('.login').removeClass('active');
+        })
+        $('#buscador').on('click', function(){
+            $('.registrarme').removeClass('active');
+            $('.login').removeClass('active');
+            $('.buscador').addClass('active');
+            $('#buscador').addClass('selected');
+            $('#registro').removeClass('selected');
+            $('.bag').removeClass('active');
+            $('#carrito').removeClass('selected');
+        })
+        $('#btnCuenta').on('click', function(){
+            $('.registrarme').removeClass('active');
+            $('.login').addClass('active');
+            $('#registro').addClass('selected');
+        })
+        $('#btnRegistrarme').on('click', function(){
+            $('.login').removeClass('active');
+            $('.registrarme').addClass('active');
+            $('#registro').addClass('selected');
+        })
+        $(function(){
+            $('#formRegistro').validationEngine({
+                scroll: false
+            });
+        });
+        $(function(){
+            $('#formLogin').validationEngine({
+                scroll: false
+            });
+        });
+    </script>
+</body>
+</html>
