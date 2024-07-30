@@ -6,6 +6,10 @@ import { DetalleComponent } from './detalle/detalle.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { BagComponent } from './bag/bag.component';
+import { LoginComponent } from './Admin/login/login.component';
+import { DashboardComponent } from './Admin/dashboard/dashboard.component';
+import { ProveedorComponent } from './Admin/proveedor/proveedor.component';
+import { MateriaPrimaComponent } from './Admin/materia-prima/materia-prima.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,5 +18,9 @@ export const routes: Routes = [
   { path: 'detalle', component: DetalleComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'catalogo', component: CatalogoComponent },
-  { path: 'bag', component: BagComponent }
+  { path: 'bag', component: BagComponent },
+  {path: 'admin', component: LoginComponent},
+  {path: 'admin/dashboard', component: DashboardComponent},
+  {path: 'admin/proveedor', component: ProveedorComponent},
+  {path: 'admin/materia_prima', component: MateriaPrimaComponent},
 ];
